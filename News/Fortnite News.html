@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fortnite Blog Posts</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        background-color: #24292e;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        margin: 20px 0;
+        align-items: center;
+        text-align: center;
+      }
+
+      table {
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Dropdown menu styles */
+      .nav-dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .nav-dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #24292e;
+        min-width: 160px;
+        z-index: 1;
+        border-radius: 5px;
+      }
+
+      .nav-dropdown-content a {
+        color: gold;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .nav-dropdown-content a:hover {
+        background-color: #575757;
+      }
+
+      .nav-dropdown:hover .nav-dropdown-content {
+        display: block;
+      }
+
+      .nav-dropdown .dropbtn {
+        background-color: transparent;
+        color: gold;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      th,
+      td {
+        border: 2px solid black;
+        padding: 0;
+        text-align: center;
+      }
+
+      a {
+        color: gold;
+        text-decoration: none;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        display: block;
+        padding: 12px 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #575757;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin-top: 20px;
+      }
+
+      .section-title {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin: 20px 0 10px;
+        text-align: center;
+      }
+
+      /* Modified to display posts vertically */
+      .blog-section {
+        display: flex;
+        flex-direction: column; /* Changes posts to be stacked vertically */
+        align-items: center; /* Centers them horizontally */
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .blog-post {
+        position: relative;
+        width: 90%; /* Adjust width to make it look better vertically */
+        height: auto; /* Allow the height to adjust based on image aspect ratio */
+        margin: 15px 0; /* Adjusted to space posts vertically */
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .blog-post:hover {
+        transform: scale(1.05);
+      }
+
+      .blog-post img {
+        width: 100%; /* Make the image fill the width of the container */
+        height: auto; /* Maintain aspect ratio, height adjusts automatically */
+        object-fit: cover; /* Ensures the image covers the space without distortion */
+        transition: opacity 0.3s;
+      }
+
+      .blog-post:hover img {
+        opacity: 0.7;
+      }
+
+      .blog-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 18px;
+      }
+
+      footer {
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Fortnite Blog Post</h1>
+      <nav>
+        <table>
+          <tr>
+            <th><a href="/index.html">Home</a></th>
+            <th><a href="/Socials/socials.html">Socials</a></th>
+            <th><a href="/Fortnite Map/Fortnite Map.html">Map</a></th>
+            <th><a href="/News/Fortnite News.html">News</a></th>
+            <th><a href="/Fortnite Shop/Fortnite Shop.html">Item shop</a></th>
+            <th>
+              <a href="/Fortnite Cosmetics/Fortnite Cosmetics.html"
+                >Cosmetics</a
+              >
+            </th>
+            <!-- Dropdown for Progress Tracker -->
+            <th class="nav-dropdown">
+              <button class="dropbtn">Progress Tracker</button>
+              <div class="nav-dropdown-content">
+                <a
+                  href="/Fortnite Progress Tracker/Fortnite Progress Tracker.html"
+                  >Fortnite Progress Tracker</a
+                >
+                <a href="/Fortnite OG Tracker/Fortnite OG Tracker.html"
+                  >Fortnite OG Progress Tracker</a
+                >
+                <a
+                  href="/Fortnite Festival Progress Tracker/Fortnite Festival Progress Tracker.html"
+                  >Fortnite Festival Progress Tracker</a
+                >
+                <a
+                  href="/Lego Fortnite Progress Tracker/LegoFortniteTracker.html"
+                  >Fortnite Lego Progress Tracker</a
+                >
+              </div>
+            </th>
+          </tr>
+        </table>
+      </nav>
+    </header>
+
+    <div class="section-title">Latest Blog Posts</div>
+    <div class="blog-section" id="blog-posts">
+      <!-- Blog Post 1 -->
+      <div class="blog-post">
+        <a
+          href="https://www.fortnite.com/news/become-godzilla-in-fortnite-battle-royale?lang=en-US"
+          target="_blank"
+        >
+          <img
+            src="https://cdn2.unrealengine.com/fortnite-battle-royale-godzilla-kong-header-1900x600-11d95fb74616.jpg"
+            alt="Blog Post 1"
+            style="border-radius: 10px; margin-bottom: 10px"
+          />
+          Become Godzilla in Fortnite!
+        </a>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="blog-post">
+        <a
+          href="https://www.fortnite.com/news/virtual-artist-hatsune-miku-beams-into-fortnite-festival-season-7?lang=en-US"
+          target="_blank"
+        >
+          <img
+            src="https://pbs.twimg.com/media/GhLeA_lWsAAqVsx.jpg:large"
+            alt="Blog Post 2"
+            style="border-radius: 10px; margin-bottom: 10px"
+          />
+          Virtual Artist Hatsune Miku Comes to Fortnite!
+        </a>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="blog-post">
+        <a
+          href="https://www.fortnite.com/news/redeem-a-v-bucks-card-and-get-the-color-splash-jellie-outfit-in-fortnite?lang=en-US"
+          target="_blank"
+        >
+          <img
+            src="https://cdn2.unrealengine.com/fortnite-color-splash-jellie-outfit-1900x600-a9a5c48baa8f.jpg"
+            alt="Blog Post 3"
+            style="border-radius: 10px; margin-bottom: 10px"
+          />
+          Get the Color Splash Jellie Outfit for Free!
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Fortnite Blog. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
